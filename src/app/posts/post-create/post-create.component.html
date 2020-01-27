@@ -1,0 +1,16 @@
+
+<mat-card>
+    <h3>Component Interaction using Angular</h3>
+    <hr/>
+        <mat-form-field>
+      <input matInput placeholder="Enter title here.." type="text" [(ngModel)]="enteredTitle">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Enter content here.." rows="5" [(ngModel)]="enteredContent"></textarea>
+    </mat-form-field>
+    <br>
+    <button
+    mat-raised-button
+    color="accent" (click)="onAddPost()">Save Post</button>
+</mat-card>

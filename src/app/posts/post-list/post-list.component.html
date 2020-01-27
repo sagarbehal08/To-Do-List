@@ -1,0 +1,13 @@
+<mat-accordion multi="true" *ngIf="posts.length > 0"> <!--multi allows to open more then 1 accordion-->
+    <mat-expansion-panel *ngFor="let post of posts;let i=index">
+      <mat-expansion-panel-header>
+         {{post.title}}
+    </mat-expansion-panel-header>
+    <p>{{post.content}}</p> 
+    
+    <button
+    mat-raised-button
+    color="primary" (click)="del(i)">Delete</button>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="infotext mat-body-1" *ngIf="posts.length<=0">No Post Added Yet! </p>
